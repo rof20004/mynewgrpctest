@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api;
+
+service Discount {
+  rpc CalculateDiscount(Request) returns (Response) {}
+}
+
+message Request {
+  int64 id = 1;
+  string name = 2;
+}
+
+message Response {
+  int64 id = 1;
+  string name = 2;
+  int32 pct = 3;
+}
